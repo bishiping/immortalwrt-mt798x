@@ -67,7 +67,8 @@ To build your own firmware you need a GNU/Linux, BSD or MacOSX system (case sens
      ```
      
   7. Run `make menuconfig` to select your preferred configuration for the toolchain, target system & firmware packages.
-  8. Run `make -j$(nproc)` to build your firmware. This will download all sources, build the cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen applications for your target system.
+  8. Run `make download -j$(nproc)` to download essential packages.
+  9. Run `make -j$(nproc)` to build your firmware. This will download all sources, build the cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen applications for your target system.
 
   ### Related Repositories
   The main repository uses multiple sub-repositories to manage packages of different categories. All packages are installed via the ImmortalWrt package manager called opkg. If you're looking to develop the web interface or port packages to ImmortalWrt, please find the fitting repository below.
