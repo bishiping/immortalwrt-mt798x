@@ -127,7 +127,8 @@ endif
 CMAKE_OPTIONS += \
 	-DUSE_SHARED_MBEDTLS_LIBRARY:Bool=ON \
 	-DENABLE_TESTING:Bool=OFF \
-	-DENABLE_PROGRAMS:Bool=ON
+	-DENABLE_PROGRAMS:Bool=ON \
+	-DENABLE_ARMV8_CRYPTO=OFF 
 
 define Build/Configure
 	$(Build/Configure/Default)
